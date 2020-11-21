@@ -31,4 +31,3 @@ total_lessons_amount = 5
 
 for row in range(2, classes_sheet.max_row + 1):
 	lessons_amount = classes_sheet.cell(row, total_lessons_amount)
-	
