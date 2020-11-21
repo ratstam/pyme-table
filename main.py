@@ -5,6 +5,9 @@ classes_sheet = classes_wb['Sheet1']
 
 cell = classes_sheet.cell(2,1)
 
+class_name = ''
+class_hours = 0
+
 class_hours = {
 	class_name : class_hours ,
 	'1h' : '' ,
@@ -27,5 +30,5 @@ print(classes)
 total_lessons_amount = 5
 
 for row in range(2, classes_sheet.max_row + 1):
-	lessons_amount = classes_sheet.cell(row, total_lessons_amount).
+	lessons_amount = classes_sheet.cell(row, total_lessons_amount)
 	
