@@ -1,0 +1,35 @@
+INPUT>
+classes/ profs and hours 4 each 1:
+hours, profs, classes
+
+
+OUTPUT>
+new xlsx with timetable, one for profs, another one for classes
+
+
+WHAT THE PROGRAM HAS TO DO>
+Generate a random time table for each class
+
+No overlapping lessons between classes and profs
+
+Time table must respect the amount of hours with each prof
+
+
+
+
+DRSCRIPTION>
+store all classes in all_classes
+
+
+2D array (TIME_TABLE) :  [0] class ( each will be repeated 5 times), [1] professor,[2] day, [3]1st hour
+
+get [0] from all_classes
+		insert class in [0] TIME_TABLE
+		and check all the professors 
+create an array with all the professors of a class
+get [0] professor of a class
+		insert in [1] of TIME_TABLE[class]
+		and check for hours
+
+
+get the [0] day and inserti in TIME_TABLE[2]
