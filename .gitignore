@@ -2,3 +2,4 @@ tempCodeRunnerFile.py
 .vscode/*
 
 ~$classes.xlsx
+__pycache__/*
