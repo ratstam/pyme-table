@@ -13,6 +13,7 @@ classes = ''
 days = ("Monday", "Tuesday", "Wednesday", "Thusday", "Fridat", "Saturday", "Sunday")
 hours = (1, 2, 3, 4, 5)
 worksheet_to_array = []
+temp_row_worksheet_to_array = []
 time_table = []
 
 #  Debug
@@ -26,20 +27,28 @@ for row in range(2, loop_rows):
 	# print('Debug 2')
 	
 	for column in range(1, loop_columns):
-		worksheet_to_array = [ [[] for i in range(1, loop_columns) ] for j in range(1, loop_rows) ]
-
 		#  Debug
 		# print(f'{column}, {row}')
 		# print('Debug 3')
 		# print(classes_sheet.cell(row, column).value)
-		
-		cell_value = str(classes_sheet.cell(row, column).value)
 
-		# DOESN'T ACTUALLY ADDS
-		worksheet_to_array[row-1].extend(cell_value)
+		cell_value = classes_sheet.cell(row, column).value
+
+		# Debug
+		# print(f" row: {row}, column: {column}")
+
+
+		temp_row_worksheet_to_array.append(cell_value)
+	worksheet_to_array.append(temp_row_worksheet_to_array)
+
 
 #  Debug
+# print(temp_worksheet_to_array)
 print(worksheet_to_array)
+
+
+
+
 
 # for row in range(2, classes_sheet.max_row + 1):
 # 	class_name = classes_sheet.cell(row, class_names).value
