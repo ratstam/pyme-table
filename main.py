@@ -15,14 +15,17 @@ cell = classes_sheet.cell(2,1)
 
 days = ("Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday", "Sunday")
 hours = (1, 2, 3, 4, 5)
-worksheet_to_array = []
+loop_rows = classes_sheet.max_row + 1
+loop_columns = classes_sheet.max_column + 1
 temp_row_worksheet_to_array = []
+worksheet_to_array = []
+temp_time_table = []
 time_table = []
 professor_hours = 0
 class_lessons = []
 class_lessons_array = []
-loop_rows = classes_sheet.max_row + 1
-loop_columns = classes_sheet.max_column + 1
+day_time_table = []
+class_time_table = []
 
 
 for row in range(2, loop_rows):
@@ -50,6 +53,21 @@ for row in worksheet_to_array:
 	class_lessons_array.append(class_lessons)
 	class_lessons = []
 
+day_lessons = hours[-1]
+
+for day in days:
+	for class_lessons in range(0, len(class_lessons_array)):
+		for lesson in hours:
+		# replace with a choose 5 times and delete choosen
+			random_lesson = random.choice(class_lessons_array[class_lessons])
+			# print(random_lesson)
+			day_time_table.append(random_lesson)
+		day_time_table.append(day)
+		# print(day_time_table)
+	class_time_table.append(day_time_table)
+time_table.append(class_time_table)
+
+print(time_table)
 
 # Debug
 # print(class_lessons_array)
