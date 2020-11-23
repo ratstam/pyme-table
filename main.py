@@ -4,8 +4,6 @@ import random
 
 classes_wb = xl.load_workbook('classes.xlsx')
 classes_sheet = classes_wb['Sheet1']
-cell = classes_sheet.cell(2,1)
-
 
 # unused
 	# class_name = '' 
