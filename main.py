@@ -11,7 +11,7 @@ classes_sheet = classes_wb['Sheet1']
 	# class_names = 1
 	# classes = ''
 
-days = ("Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday", "Sunday")
+days = ("Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday")
 hours = (1, 2, 3, 4, 5)
 loop_rows = classes_sheet.max_row + 1
 loop_columns = classes_sheet.max_column + 1
@@ -23,6 +23,7 @@ professor_hours = 0
 class_lessons = []
 class_lessons_array = []
 day_time_table = []
+week_time_table = []
 class_time_table = []
 
 
@@ -51,21 +52,28 @@ for row in worksheet_to_array:
 	class_lessons_array.append(class_lessons)
 	class_lessons = []
 
-day_lessons = hours[-1]
 
-for day in days:
-	for class_lessons in range(0, len(class_lessons_array)):
+for class_lessons in range(0, len(class_lessons_array)):
+	lessons_left = (class_lessons_array[class_lessons])
+	for day in days:
 		for lesson in hours:
-		# replace with a choose 5 times and delete choosen
-			random_lesson = random.choice(class_lessons_array[class_lessons])
+			random_lesson = random.choice(lessons_left)
+			lessons_left.remove(random_lesson)
 			# print(random_lesson)
+
 			day_time_table.append(random_lesson)
 		day_time_table.append(day)
-		# print(day_time_table)
-	class_time_table.append(day_time_table)
-time_table.append(class_time_table)
+		class_time_table.append(day_time_table)
+		day_time_table = []
+	time_table.append(class_time_table)
+	class_time_table = []
 
 print(time_table)
+
+# for lesson in time_table[0]:
+# 	index = time_table.index(lesson)
+# 	for row in time_table:
+# 		if
 
 # Debug
 # print(class_lessons_array)
