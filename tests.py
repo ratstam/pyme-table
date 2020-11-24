@@ -11,9 +11,12 @@ import random
 # print(array)
 
 
-population = ['a', 'b', 'c']
+# population = ['a', 'b', 'c']
 
-while len(population) > 0:
-	random_sample = random.choice(population)
-	population.remove(random_sample)
-	print(random_sample)
+# while len(population) > 0:
+# 	random_sample = random.choice(population)
+# 	population.remove(random_sample)
+# 	print(random_sample)
+
+for i in range(0, 4):
+	print(i)

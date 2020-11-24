@@ -68,12 +68,12 @@ for class_lessons in range(0, len(class_lessons_array)):
 	time_table.append(class_time_table)
 	class_time_table = []
 
-print(time_table)
+# print(time_table)
+# for row in time_table:
+# 	for day in time_table[0]
+# 		for lesson_index in range(0, len(time_table[0][0])-2): #-2 because last obj is the day
+# 			lesson = time_table[0][0][lesson_index]
+# 				if 
 
-# for lesson in time_table[0]:
-# 	index = time_table.index(lesson)
-# 	for row in time_table:
-# 		if
-
-# Debug
+# # Debug
 # print(class_lessons_array)
